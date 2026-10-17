@@ -57,10 +57,8 @@ img { max-width: 100%; }
 .hero-stats strong { display: block; font-family: Fraunces, serif; font-size: 1.7rem; color: var(--deep); }
 .hero-stats span { font-size: .85rem; color: var(--muted); line-height: 1.35; display: block; }
 .hero-visual { display: flex; justify-content: center; }
-.portrait { width: min(360px, 80vw); aspect-ratio: 4/5; border-radius: 200px 200px 28px 28px; background: radial-gradient(circle at 30% 20%, var(--aqua), var(--sea) 45%, var(--deep) 100%); display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--white); box-shadow: 0 30px 60px rgba(11,79,108,.25); position: relative; overflow: hidden; }
-.portrait::after { content: ""; position: absolute; inset: auto -20% -10% -20%; height: 40%; background: repeating-radial-gradient(ellipse at 50% 0, rgba(255,255,255,.18) 0 8px, transparent 8px 22px); }
-.portrait span { font-family: Fraunces, serif; font-size: 5rem; font-weight: 700; letter-spacing: .05em; }
-.portrait small { opacity: .75; font-size: .85rem; }
+.portrait { width: min(360px, 80vw); aspect-ratio: 4/5; border-radius: 200px 200px 28px 28px; overflow: hidden; box-shadow: 0 30px 60px rgba(11,79,108,.25); background: var(--sea); }
+.portrait img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .wave { position: absolute; bottom: -1px; left: 0; width: 100%; height: 90px; fill: var(--white); }
 
 /* Sections */
@@ -105,6 +103,13 @@ img { max-width: 100%; }
 .results tr:hover td { background: #f6fbfd; }
 .pos { font-weight: 600; }
 .source { font-size: .85rem; color: var(--muted); }
+
+/* Gallery */
+.gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; margin-top: 30px; }
+.gallery figure { margin: 0; background: var(--white); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
+.gallery img { width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; }
+.gallery figcaption { padding: 12px 16px; font-size: .92rem; color: var(--muted); }
+.gallery figcaption:empty { display: none; }
 
 /* Venue */
 .venue { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
