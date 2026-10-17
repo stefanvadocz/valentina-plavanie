@@ -18,10 +18,10 @@
   // Administrácia: otvorí sa cez ?admin
   if (new URLSearchParams(location.search).has("admin")) {
     const css = document.createElement("link");
-    css.rel = "stylesheet"; css.href = "admin/admin.css";
+    css.rel = "stylesheet"; css.href = "admin/admin.css?v=2";
     document.head.appendChild(css);
     const js = document.createElement("script");
-    js.src = "admin/admin.js"; js.defer = true;
+    js.src = "admin/admin.js?v=2"; js.defer = true;
     document.body.appendChild(js);
   }
 
